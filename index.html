@@ -4,11 +4,39 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
 	<link rel="stylesheet" href="assets/css/screen.css">
 	<script src="assets/js/script.js"></script>
+
+	<title> Currency Converter </title>
 </head>
 <body>
+
+	<header> Currency Converter </header>
+
+	<main>
+		<form>
+			<label for="from">From:</label>
+			<select id="from">
+				<!-- add options -->
+			</select>
+	
+			<label for="to">To:</label>
+			<select id="to">
+				<!-- add options -->
+			</select>
+	
+			<label for="amount"> Amount: </label>
+			<input type="number" min="0">
+	
+			<button type="submit">Convert</button>
+		</form>
+	
+		<div id="result">
+			<h2> Converted:</h2>
+			<p> AUS &#8594; CAN </p>
+			<p> 90 &#8594; 135 </p>
+		</div>	
+	</main>
 	
 </body>
 </html>
