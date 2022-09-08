@@ -5,6 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="assets/css/screen.css">
+	<script src="assets/js/exchange-info.js"></script>
+	<script src="assets/js/calculate-exchange.js"></script>
 	<script src="assets/js/script.js"></script>
 
 	<title> Currency Converter </title>
@@ -16,25 +18,23 @@
 	<main>
 		<form>
 			<label for="from">From:</label>
-			<select id="from">
+			<select id="from" required>
 				<!-- add options -->
 			</select>
 	
 			<label for="to">To:</label>
-			<select id="to">
+			<select id="to" required>
 				<!-- add options -->
 			</select>
 	
-			<label for="amount"> Amount: </label>
-			<input type="number" min="0">
+			<label for="q"> Amount: </label>
+			<input type="number" id="q" min="0" autocomplete="off" required>
 	
 			<button type="submit">Convert</button>
 		</form>
 	
 		<div id="result">
-			<h2> Converted:</h2>
-			<p> AUS &#8594; CAN </p>
-			<p> 90 &#8594; 135 </p>
+			
 		</div>	
 	</main>
 	
