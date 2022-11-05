@@ -4,10 +4,13 @@ const URL = "https://currency-exchange.p.rapidapi.com/exchange";
 
 async function getCurrencyInfo(e){
 	e.preventDefault();
+	const rapidAPIKey = document.querySelector("#rapidKey").value;
+	if (document.querySelector("#rapidKey").value === null) return;
+
 	const fetchInfo = await fetch(`${URL}${objectToQueryParams(getUserInfo())}`, {
 	method: 'GET',
 	headers: {
-    'X-RapidAPI-Key': '90afc290a4msh942c639bb0fe563p15afe0jsn7d560927cf10',
+    'X-RapidAPI-Key': `${rapidAPIKey}`,
     'X-RapidAPI-Host': 'currency-exchange.p.rapidapi.com'}
 	});
 	const res = await fetchInfo.json();
